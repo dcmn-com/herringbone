@@ -31,7 +31,7 @@ case class HiveLoader(conf: ParquetLoadConf,
     val leafPaths = hadoopFs.findSortedLeafPaths(path)
 
     if (leafPaths.isEmpty)
-      error("Could not find parquet files under " + path)
+      sys.error("Could not find parquet files under " + path)
 
     val tableFields = fieldUtils.findTableFields(leafPaths.last)
     val partitionFields = fieldUtils.findPartitionFields(leafPaths.last)
