@@ -102,7 +102,7 @@
   <properties>
     <parquet.version>1.6.0rc7</parquet.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <scala.version>2.12.8</scala.version>
+    <scala.version>2.12.9</scala.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
