@@ -61,6 +61,7 @@ object ParquetCompactWriteSupport {
 class CompactJob extends Configured with Tool {
   override def run(arguments: Array[String]) = {
     val conf = new ParquetCompactConf(arguments)
+    conf.verify()
     val inputPath = new Path(conf.inputPath())
     val fs = inputPath.getFileSystem(getConf)
     val outputPathString = conf.outputPath.get.getOrElse(conf.inputPath().stripSuffix("/").concat("-compact"))
